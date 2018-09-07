@@ -15,7 +15,7 @@ $(document).ready(function() {
     localStorage.setItem(inputKey, inputValue);
 
     /*alert( "value from local storage" + localStorage.getItem("testStorage") );*/
-    let itemHtml = '<div class="display-item" data-storage-key="'+ inputKey +'"> ' + inputKey + ' ' + localStorage.getItem(inputKey) + '</div>';
+    let itemHtml = '<div class="display-item" data-storage-key="'+inputKey+'"> ' + inputKey + ' ' + localStorage.getItem(inputKey) + '</div>';
     $(".display").html(itemHtml);
     //console.log(localStorage);
     //how can we delegate this event to the outer html node?
@@ -46,7 +46,11 @@ $(document).ready(function() {
 
   $(".del-text-btn").on("click", function() {
   	localStorage.removeItem($('.user-input-title').val() );
-  	alert('item deleted? check console');
+  	alert('item deleted? check console'); //maybe change to a window.confirm
+  	$(".user-input-title").val("");
+    $(".user-input-body").val("");
+    // clearing display? what if I have multiple items?
+    // after item is removed from local storage redisplay items from the old storage
   });
 
   /* Iterative approach to adding items 
