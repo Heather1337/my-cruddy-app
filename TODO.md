@@ -39,22 +39,38 @@
 7 = 5 hours
 10 = full day + ??
 
-*(5) add due date*
+(5) add due date
 (7) time stamps(moment.js maybe ties into)
-(5) format the display of the items in a list 
+(5) *format the display of the items in a list* 
 () mouseover to see details
-(7) color coded priority
+(7) *color coded priority*
 () delete/add multiple items by selecting
-upload files/imgs
-leave comments
-share item
-drag and drop to arrange items
-filter on keypress
-font changes/choices?
-panic button
-*highlight based on status and importance*
-search items
-fun stuff 
+() upload files/imgs
+() *leave comments*
+() share item
+() drag and drop to arrange items
+() *filter on keypress*
+() font changes/choices?
+() panic button
+() highlight based on status and importance
+() *search items*
+() fun stuff 
+
+Basic Idea:
+
+Friends/Coworkers are constantly recommending (movies, tv shows, songs, books, places to visit, etc) YET we rarely can keep track or remember what it was they had recommended to us! I am creating an organized list site that allows for you to add/delete/comment on those recommendations. 
+
+Input - Category box and Recommended Item box 
+  - Ability to comment on items once added
+
+Title will be for picking category that item belongs to (array)
+  i.e. movies, songs, restaurants, places, books
+
+Items will be what is added to each category array 
+  i.e. Philz Coffee, Big Sur, Blue Lagoon, Les Miserables
+
+
+
 
 
 
