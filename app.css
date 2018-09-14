@@ -1,0 +1,97 @@
+
+/* Styling for the background */
+body {background-color: #DDF5FF;}
+
+/* Styling for Cache Header */
+h1 {
+  font-family: 'Lobster', cursive;
+  color: white;
+  text-shadow: #2D163B 0.1em 0.1em 0.2em
+}
+
+/* Styling for the list of todo's */
+.display {
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+  color: #8960B8;
+  margin-top: 20px;
+  margin-left: 20px;
+  padding: auto;
+}
+/* Stying User Input Title*/
+.user-input-title {
+  margin-left: 10px;
+}
+
+/* Stying User Input Body*/
+.user-input-body {
+  margin-left: 10px;
+}
+
+/* Styling the Add/Delete/Clear buttons */
+button {
+  background-color: #C9BEE8;
+  border-radius: 12px;
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+/* Popup container */
+.popup {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    margin-left: 10px;
+    font-size: 20px;
+    color: #8960B8;
+}
+
+/* The actual popup (appears on top) */
+.popup .popuptext {
+    visibility: hidden;
+    width: 160px;
+    background-color: #C9BEE8;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -80px;
+}
+
+/* Popup arrow */
+.popup .popuptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+/* Toggle this class when clicking on the popup container (hide and show the popup) */
+.popup .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+    from {opacity: 0;} 
+    to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity:1 ;}
+}
+

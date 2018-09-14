@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang='en'>
+
 <head>
 	<meta charset="UTF-8">
 	<title>My First Crud App</title>
@@ -8,16 +9,26 @@
 	   integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E="
 	   crossorigin="anonymous"></script>
 	<script src="app.js"></script>
-
+	<link rel= "stylesheet" type="text/css" href="app.css">
+	<link href="https://fonts.googleapis.com/css?family=Lobster|Open+Sans+Condensed:300" rel="stylesheet">
 </head>
+
 	<body>
+		<h1 id="title">GOTTA CACHE 'EM ALL</h1>
+        <textarea class="user-input-title" placeholder="Enter the Pokemon Card"></textarea>
+		<textarea class="user-input-body" placeholder="Enter the quantity"></textarea>
 
-		<input type="text" class="user-input-title" placeholder="Enter the Title">
-		<textarea class="user-input-body" placeholder="Enter the body of text"></textarea>
+		<button class="add-text-btn">Add Item</button>
+		<button class="del-text-btn">Delete Item</button>
+		<button class="del-all-btn">Clear List</button>
 
-		<button class="add-text-btn">add text</button>
-		<button class="del-text-btn">delete text</button>
+		<div class="popup">Click me!<span class="popuptext" id="myPopup">Congrats! You cached 'em all!!</span>
+        </div>
 
-		<div class="display"></div>
-	</body>
+		
+		<ul>
+			<div class= "display"></div>
+		</ul>
+    </body>
+
 </html>

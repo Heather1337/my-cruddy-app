@@ -1,12 +1,21 @@
 $(document).ready(function() {
 
+  ///////*For Adding Each inputKey & inputValue to Display*/////////
+  for (var key in localStorage) {
+    if (key !== "length" && key !== "setItem" && key !== "key"  && key !== "removeItem" && key !== "clear" && key !== "getItem") {
+      let itemList = '<div class="display-item" data-storage-key="'+key+'"> ' + key + ' : ' + '<span class="description">' + localStorage.getItem(key) +'</span></div>';
+      $(itemList).appendTo(".display");
+    }
+  }
+
+  //////////*For Adding Category and Item Button*//////////
   $(".add-text-btn").on("click", function() {
 
   	// store values
   	let inputKey = $(".user-input-title").val();
   	let inputValue = $(".user-input-body").val();
 
-  	//clear values
+  	//clear values from input boxes after adding them
   	$(".user-input-title").val("");
     $(".user-input-body").val("");
 
@@ -34,29 +43,43 @@ $(document).ready(function() {
 
   });
 
-  
+  ////* Hide a list item on double click *///////////
+    $(".display").on("dblclick", '*', function() {
+      $(this).hide("fast");
+    });
 
-  /*Allowing for previewing text live*/
-  // TODO add back in later
-  // $(".user-input").on("keyup", function() {
-  // 	let inputValue = $(".user-input").val();
-  //   localStorage.setItem("testStorage", inputValue);
-  //   $(".display").text(localStorage.getItem("testStorage"));
-  // });
+
+  ////* Highlight a list item on double click *//////
+    // $(".display").on("dblclick", '*', function() {
+    //   $(this).hide("slow");
+    // });
+
+
+  
+// When the user clicks on <div>, open the popup //
+  $(".popup").on("click", function() {
+    console.log('working')
+    var popup = document.getElementById("myPopup");
+    popup.classList.toggle("show");
+  });
+   
+
+
+  /////////*For Deleting Category and Item Button*//////////
 
   $(".del-text-btn").on("click", function() {
-  	localStorage.removeItem($('.user-input-title').val() );
-  	alert('item deleted? check console'); //maybe change to a window.confirm
+  	localStorage.removeItem($('.user-input-title').val());
+  	alert('item deleted? check console'); 
   	$(".user-input-title").val("");
     $(".user-input-body").val("");
-    // clearing display? what if I have multiple items?
-    // after item is removed from local storage redisplay items from the old storage
   });
 
-  /* Iterative approach to adding items 
-     Store data as stringified array of objects 
-     Store data with individual keys
-     How do we get keys? reasearch Object.keys */
+  //////////*For Deleting All Items at Once*//////////
+
+  $(".del-all-btn").on("click", function() {
+    localStorage.clear() ;
+    $("#display").html("");
+  });
 
 
 });
