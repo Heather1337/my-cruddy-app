@@ -1,7 +1,7 @@
 $(document).ready(function() {
 
   ///////*For Adding Each inputKey & inputValue to Display*/////////
-  for (var key in localStorage) {
+  for (var key in localStorage ) {
     if (key !== "length" && key !== "setItem" && key !== "key"  && key !== "removeItem" && key !== "clear" && key !== "getItem") {
       let itemList = '<div class="display-item" data-storage-key="'+key+'"> ' + key + ' : ' + '<span class="description">' + localStorage.getItem(key) +'</span></div>';
       $(itemList).appendTo(".display");
